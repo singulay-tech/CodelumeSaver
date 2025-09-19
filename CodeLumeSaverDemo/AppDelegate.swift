@@ -51,6 +51,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc private func preferencesDidChange(_ notification: NSNotification?) {
     }
     
+    @IBAction func showPreferences(_ sender: Any) {
+        guard let sheet = view.configureSheet else { return }
+
+        window.beginSheet(sheet) { [weak sheet] _ in
+            sheet?.close()
+        }
+    }
     
 }
 

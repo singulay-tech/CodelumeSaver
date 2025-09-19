@@ -8,5 +8,5 @@
 import Foundation
 
 extension Notification.Name {
-    static let PreferencesDidChange = Notification.Name(rawValue: "com.codelume.preferencesDidChange")
+    static let PreferencesDidChange = Notification.Name(rawValue: "com.codelume.preferencesdidchange")
 }

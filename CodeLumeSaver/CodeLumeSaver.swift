@@ -7,12 +7,21 @@
 
 import AppKit
 import ScreenSaver
-import AVKit
-import AVFoundation
 
 class CodeLumeSaver: ScreenSaverView {
-    private var player: AVPlayer?
-    private var playerLayer: AVPlayerLayer?
+    private var codeLumeView: CodeLumeView? {
+        willSet {
+            let codeLumeView = self.codeLumeView
+            codeLumeView?.removeFromSuperview()
+        }
+
+        didSet {
+            if let codeLumeView = codeLumeView {
+                codeLumeView.autoresizingMask = [.width, .height]
+                addSubview(codeLumeView)
+            }
+        }
+    }
     
     override var hasConfigureSheet: Bool {
         return true
@@ -24,59 +33,25 @@ class CodeLumeSaver: ScreenSaverView {
     
     override init?(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
-        setupView()
+        initialize()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupView()
+        initialize()
     }
     
-    private func setupView() {
-        DistributedNotificationCenter.default.addObserver(
-            self,
-            selector: #selector(screenSaverWillStop),
-            name: NSNotification.Name("com.apple.screensaver.didstop"),
-            object: nil
-        )
-
-        if let videoURL = Bundle(for: type(of: self)).url(forResource: "codelume_1", withExtension: "mp4") {
-            player = AVPlayer(url: videoURL)
-            
-            if let player = player {
-                playerLayer = AVPlayerLayer(player: player)
-                if let playerLayer = playerLayer {
-                    playerLayer.frame = self.bounds
-                    playerLayer.videoGravity = .resizeAspectFill
-                    self.layer = playerLayer
-                    self.wantsLayer = true
-                    
-                    player.actionAtItemEnd = .none
-                    NotificationCenter.default.addObserver(
-                        self,
-                        selector: #selector(playerItemDidReachEnd),
-                        name: .AVPlayerItemDidPlayToEndTime,
-                        object: player.currentItem
-                    )
-                    player.play()
-                }
-            }
-        }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
-    @objc private func playerItemDidReachEnd(notification: Notification) {
-        if let playerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: .zero, completionHandler: nil)
-            player?.play()
-        }
+    private func initialize() {
+        NotificationCenter.default.addObserver(self, selector: #selector(preferencesDidChange),
+                                               name: .PreferencesDidChange, object: nil)
+        preferencesDidChange(nil)
     }
     
-    @objc private func screenSaverWillStop() {
-        player?.pause()
-        player?.replaceCurrentItem(with: nil)
-        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
-        playerLayer?.removeFromSuperlayer()
-        playerLayer = nil
-        player = nil
+    @objc private func preferencesDidChange(_ notification: NSNotification?) {
+        codeLumeView = CodeLumeView(frame: bounds)
     }
 }
