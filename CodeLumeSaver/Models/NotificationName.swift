@@ -1,5 +1,5 @@
 //
-//  NotificationCenter.swift
+//  NotificationName.swift
 //  CodeLumeSaver
 //
 //  Created by lyke on 2025/9/19.
@@ -7,6 +7,6 @@
 
 import Foundation
 
-extension NotificationCenter {
-    
+extension Notification.Name {
+    static let PreferencesDidChange = Notification.Name(rawValue: "com.codelume.preferencesDidChange")
 }
