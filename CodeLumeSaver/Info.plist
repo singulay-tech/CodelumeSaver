@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>NSPrincipalClass</key>
-	<string>CodeLumeSaverView</string>
+	<string>CodeLumeSaver</string>
 </dict>
 </plist>
