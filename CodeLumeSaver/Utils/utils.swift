@@ -17,6 +17,7 @@ func getApplicationSupportDirectory() -> URL? {
     
     do {
         try fileManager.createDirectory(at: appDir, withIntermediateDirectories: true, attributes: nil)
+        NSLog("Created application support directory: \(appDir.path)")
         return appDir
     } catch {
         print("Failed to create application support directory: \(error)")

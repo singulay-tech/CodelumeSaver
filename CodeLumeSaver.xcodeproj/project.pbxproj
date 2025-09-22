@@ -12,6 +12,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		22200EE72E8161E90067B6A4 /* Exceptions for "CodeLumeSaver" folder in "CodeLumeSaver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 22E6CA3D2E7AAD880024FBC5 /* CodeLumeSaver */;
+		};
 		22EDA05B2E7D436D009F0AF8 /* Exceptions for "CodeLumeSaver" folder in "CodeLumeSaverDemo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -42,6 +49,7 @@
 		22E6CA402E7AAD880024FBC5 /* CodeLumeSaver */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				22200EE72E8161E90067B6A4 /* Exceptions for "CodeLumeSaver" folder in "CodeLumeSaver" target */,
 				22EDA05B2E7D436D009F0AF8 /* Exceptions for "CodeLumeSaver" folder in "CodeLumeSaverDemo" target */,
 			);
 			path = CodeLumeSaver;
@@ -357,7 +365,7 @@
 				INFOPLIST_KEY_NSPrincipalClass = CodeLumeSaver.CodeLumeSaver;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodeLumeSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -382,7 +390,7 @@
 				INFOPLIST_KEY_NSPrincipalClass = CodeLumeSaver.CodeLumeSaver;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodeLumeSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

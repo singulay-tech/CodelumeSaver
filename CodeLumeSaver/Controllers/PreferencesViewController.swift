@@ -6,13 +6,16 @@
 //
 
 import Cocoa
+import UniformTypeIdentifiers
 
 class PreferencesViewController: NSViewController {
     @IBOutlet weak var typeComboBox: NSComboBox!
     @IBOutlet weak var selectButton: NSButtonCell!
+    @IBOutlet weak var versionLabel: NSTextField!
     
     private let screensaverTypeKey = "CodeLumeScreensaverType"
     private let selectedFilePathKey = "CodeLumeSelectedFilePath"
+    private var tempSelectedFileURL: URL?
     
     private var screensaverType: ScreensaverType {
         get {
@@ -50,6 +53,7 @@ class PreferencesViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateComboBoxWithSavedType()
+        updateVersionLabel()
     }
     
     private func updateComboBoxWithSavedType() {
@@ -82,6 +86,12 @@ class PreferencesViewController: NSViewController {
     }
     
     @IBAction func doneButtonClicked(_ sender: NSButton) {
+        if let tempURL = tempSelectedFileURL {
+            if let destinationURL = copyFileToSandbox(tempURL) {
+                self.selectedFilePath = destinationURL.path
+            }
+            tempSelectedFileURL = nil
+        }
         NotificationCenter.default.post(name: .PreferencesDidChange, object: nil)
         
         cancelButtonClicked(sender)
@@ -109,10 +119,10 @@ class PreferencesViewController: NSViewController {
         
         switch screensaverType {
         case .Video:
-            openPanel.allowedFileTypes = ["mp4", "mov"]
+            openPanel.allowedContentTypes = [.mpeg4Movie, .quickTimeMovie]
             openPanel.message = "choose video file"
         case .Sprite, .Scene:
-            openPanel.allowedFileTypes = ["framework"]
+            openPanel.allowedContentTypes = [.data]
             openPanel.message = screensaverType == .Sprite ? "choose sprite framework file" : "choose scene framework file"
         }
         
@@ -123,9 +133,14 @@ class PreferencesViewController: NSViewController {
                 return
             }
             
-            if let destinationURL = copyFileToSandbox(sourceURL) {
-                self.selectedFilePath = destinationURL.path
-            }
+            self.tempSelectedFileURL = sourceURL
+        }
+    }
+
+    private func updateVersionLabel() {
+        if let infoDictionary = Bundle(for: type(of: self)).infoDictionary {
+            let version = infoDictionary["CFBundleShortVersionString"] as? String ?? "1.0"
+            versionLabel.stringValue = "Version: \(version)"
         }
     }
 }
