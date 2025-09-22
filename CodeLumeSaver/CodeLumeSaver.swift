@@ -28,7 +28,7 @@ class CodeLumeSaver: ScreenSaverView {
     }
     
     override var configureSheet: NSWindow? {
-        return nil
+        return PreferencesViewController.createPreferencesWindow()
     }
     
     override init?(frame: NSRect, isPreview: Bool) {

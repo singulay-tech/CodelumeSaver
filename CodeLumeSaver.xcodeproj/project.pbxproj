@@ -16,8 +16,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CodeLumeSaver.swift,
+				Controllers/PreferencesViewController.swift,
 				Models/NotificationName.swift,
 				Resources/codelume_1.mp4,
+				Resources/Preferences.xib,
 				Views/CodeLumeView.swift,
 			);
 			target = 22EDA04C2E7D42B5009F0AF8 /* CodeLumeSaverDemo */;
