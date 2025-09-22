@@ -22,12 +22,12 @@
 		22EDA05B2E7D436D009F0AF8 /* Exceptions for "CodeLumeSaver" folder in "CodeLumeSaverDemo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Resources/Preferences.xib",
 				CodeLumeSaver.swift,
 				Controllers/PreferencesViewController.swift,
 				Models/NotificationName.swift,
 				Models/ScreensaverType.swift,
 				Resources/codelume_1.mp4,
-				Resources/Preferences.xib,
 				Utils/utils.swift,
 				Views/CodeLumeView.swift,
 				Views/SceneView.swift,
@@ -184,6 +184,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 22E6CA342E7AAD880024FBC5;
 			minimizedProjectReferenceProxies = 1;
@@ -238,6 +239,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -301,6 +303,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
