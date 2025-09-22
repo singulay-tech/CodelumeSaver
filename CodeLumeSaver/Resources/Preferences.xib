@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesViewController" customModule="CodeLumeSaver" customModuleProvider="target">
             <connections>
+                <outlet property="selectButton" destination="qBv-Ob-tkh" id="naJ-pg-Wl3"/>
+                <outlet property="typeComboBox" destination="2kB-hE-fuq" id="RMr-m8-D5s"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -42,7 +44,7 @@ Gw
                     </connections>
                 </button>
                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ot-nh-djB">
-                    <rect key="frame" x="20" y="114" width="41" height="16"/>
+                    <rect key="frame" x="20" y="112" width="41" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Type：" id="5Fy-je-a9j">
                         <font key="font" metaFont="system"/>
@@ -50,20 +52,6 @@ Gw
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <comboBox focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kB-hE-fuq">
-                    <rect key="frame" x="106" y="110" width="177" height="23"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="eqc-oC-bnb">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        <objectValues>
-                            <string>Video</string>
-                            <string>Sprite</string>
-                            <string>Scene</string>
-                        </objectValues>
-                    </comboBoxCell>
-                </comboBox>
                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9o-mD-yI1">
                     <rect key="frame" x="20" y="67" width="71" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -79,8 +67,28 @@ Gw
                     <buttonCell key="cell" type="push" title="Open File Panel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qBv-Ob-tkh">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
+                        <connections>
+                            <action selector="selectButtonClicked:" target="-2" id="0kS-yr-7WT"/>
+                        </connections>
                     </buttonCell>
                 </button>
+                <comboBox focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kB-hE-fuq">
+                    <rect key="frame" x="106" y="108" width="177" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="eqc-oC-bnb">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>Video</string>
+                            <string>Sprite</string>
+                            <string>Scene</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxSelectionChanged:" target="-2" id="W5K-6g-AjC"/>
+                    </connections>
+                </comboBox>
             </subviews>
             <point key="canvasLocation" x="177" y="140"/>
         </customView>

@@ -36,26 +36,32 @@ class CodeLumeView: NSView {
             object: nil
         )
 
-        if let videoURL = Bundle(for: type(of: self)).url(forResource: "codelume_1", withExtension: "mp4") {
+        if let savedPath = UserDefaults.standard.string(forKey: "CodeLumeSelectedFilePath"),
+           FileManager.default.fileExists(atPath: savedPath) {
+            let videoURL = URL(fileURLWithPath: savedPath)
             player = AVPlayer(url: videoURL)
-            
-            if let player = player {
-                playerLayer = AVPlayerLayer(player: player)
-                if let playerLayer = playerLayer {
-                    playerLayer.frame = self.bounds
-                    playerLayer.videoGravity = .resizeAspectFill
-                    self.layer = playerLayer
-                    self.wantsLayer = true
-                    
-                    player.actionAtItemEnd = .none
-                    NotificationCenter.default.addObserver(
-                        self,
-                        selector: #selector(playerItemDidReachEnd),
-                        name: .AVPlayerItemDidPlayToEndTime,
-                        object: player.currentItem
-                    )
-                    player.play()
-                }
+        } else {
+            if let videoURL = Bundle(for: type(of: self)).url(forResource: "codelume_1", withExtension: "mp4") {
+                player = AVPlayer(url: videoURL)
+            }
+        }
+
+        if let player = player {
+            playerLayer = AVPlayerLayer(player: player)
+            if let playerLayer = playerLayer {
+                playerLayer.frame = self.bounds
+                playerLayer.videoGravity = .resizeAspectFill
+                self.layer = playerLayer
+                self.wantsLayer = true
+
+                player.actionAtItemEnd = .none
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(playerItemDidReachEnd),
+                    name: .AVPlayerItemDidPlayToEndTime,
+                    object: player.currentItem
+                )
+                player.play()
             }
         }
     }
