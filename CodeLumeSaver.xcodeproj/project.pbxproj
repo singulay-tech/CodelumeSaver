@@ -23,6 +23,9 @@
 				Resources/Preferences.xib,
 				Utils/utils.swift,
 				Views/CodeLumeView.swift,
+				Views/SceneView.swift,
+				Views/SpriteView.swift,
+				Views/VideoView.swift,
 			);
 			target = 22EDA04C2E7D42B5009F0AF8 /* CodeLumeSaverDemo */;
 		};

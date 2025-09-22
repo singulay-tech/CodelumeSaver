@@ -6,12 +6,10 @@
 //
 
 import AppKit
-import AVKit
-import AVFoundation
 
 class CodeLumeView: NSView {
-    private var player: AVPlayer?
-    private var playerLayer: AVPlayerLayer?
+    private var currentView: NSView?
+    private let screensaverTypeKey = "CodeLumeScreensaverType"
     
     required override init(frame: NSRect) {
         super.init(frame: frame)
@@ -25,60 +23,84 @@ class CodeLumeView: NSView {
     
     override func layout() {
         super.layout()
-        playerLayer?.frame = self.bounds
+        currentView?.frame = self.bounds
     }
     
     private func setupView() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(preferencesDidChange),
+            name: .PreferencesDidChange,
+            object: nil
+        )
+        
         DistributedNotificationCenter.default.addObserver(
             self,
             selector: #selector(screenSaverWillStop),
             name: NSNotification.Name("com.apple.screensaver.didstop"),
             object: nil
         )
-
-        if let savedPath = UserDefaults.standard.string(forKey: "CodeLumeSelectedFilePath"),
-           FileManager.default.fileExists(atPath: savedPath) {
-            let videoURL = URL(fileURLWithPath: savedPath)
-            player = AVPlayer(url: videoURL)
-        } else {
-            if let videoURL = Bundle(for: type(of: self)).url(forResource: "codelume_1", withExtension: "mp4") {
-                player = AVPlayer(url: videoURL)
+        
+        loadViewForCurrentType()
+    }
+    
+    private func loadViewForCurrentType() {
+        if let currentView = currentView {
+            if let stoppableView = currentView as? VideoView {
+                stoppableView.stop()
+            } else if let stoppableView = currentView as? SpriteView {
+                stoppableView.stop()
+            } else if let stoppableView = currentView as? SceneView {
+                stoppableView.stop()
             }
+            currentView.removeFromSuperview()
+            self.currentView = nil
         }
-
-        if let player = player {
-            playerLayer = AVPlayerLayer(player: player)
-            if let playerLayer = playerLayer {
-                playerLayer.frame = self.bounds
-                playerLayer.videoGravity = .resizeAspectFill
-                self.layer = playerLayer
-                self.wantsLayer = true
-
-                player.actionAtItemEnd = .none
-                NotificationCenter.default.addObserver(
-                    self,
-                    selector: #selector(playerItemDidReachEnd),
-                    name: .AVPlayerItemDidPlayToEndTime,
-                    object: player.currentItem
-                )
-                player.play()
-            }
+        
+        let screensaverType = getCurrentScreensaverType()
+        
+        switch screensaverType {
+        case .Video:
+            let videoView = VideoView(frame: self.bounds)
+            self.addSubview(videoView)
+            self.currentView = videoView
+        case .Sprite:
+            let spriteView = SpriteView(frame: self.bounds)
+            self.addSubview(spriteView)
+            self.currentView = spriteView
+        case .Scene:
+            let sceneView = SceneView(frame: self.bounds)
+            self.addSubview(sceneView)
+            self.currentView = sceneView
         }
+    }
+    
+    private func getCurrentScreensaverType() -> ScreensaverType {
+        if let savedType = UserDefaults.standard.string(forKey: screensaverTypeKey),
+           let type = ScreensaverType(rawValue: savedType) {
+            return type
+        }
+        return .Video
+    }
+    
+    @objc private func preferencesDidChange() {
+        loadViewForCurrentType()
     }
     
     @objc private func screenSaverWillStop() {
-        player?.pause()
-        player?.replaceCurrentItem(with: nil)
-        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
-        playerLayer?.removeFromSuperlayer()
-        playerLayer = nil
-        player = nil
-    }
-    
-    @objc private func playerItemDidReachEnd(notification: Notification) {
-        if let playerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: .zero, completionHandler: nil)
-            player?.play()
+        if let currentView = currentView {
+            if let stoppableView = currentView as? VideoView {
+                stoppableView.stop()
+            } else if let stoppableView = currentView as? SpriteView {
+                stoppableView.stop()
+            } else if let stoppableView = currentView as? SceneView {
+                stoppableView.stop()
+            }
+            currentView.removeFromSuperview()
+            self.currentView = nil
         }
+        
+        NotificationCenter.default.removeObserver(self)
+        DistributedNotificationCenter.default.removeObserver(self)
     }
 }

@@ -41,17 +41,7 @@ class CodeLumeSaver: ScreenSaverView {
         initialize()
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     private func initialize() {
-        NotificationCenter.default.addObserver(self, selector: #selector(preferencesDidChange),
-                                               name: .PreferencesDidChange, object: nil)
-        preferencesDidChange(nil)
-    }
-    
-    @objc private func preferencesDidChange(_ notification: NSNotification?) {
         codeLumeView = CodeLumeView(frame: bounds)
     }
 }
