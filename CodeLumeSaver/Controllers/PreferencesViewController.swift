@@ -80,7 +80,7 @@ class PreferencesViewController: NSViewController {
         let window = NSWindow(contentViewController: controller)
         window.styleMask = [.titled, .closable]
         window.title = "CodeLume Preferences"
-        window.setContentSize(NSSize(width: 300, height: 150))
+        window.setContentSize(NSSize(width: 300, height: 120))
         window.isReleasedWhenClosed = false
         return window
     }

@@ -3,7 +3,7 @@
   "strings" : {
     "5Fy-je-a9j.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Type：\"; ObjectID = \"5Fy-je-a9j\";",
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -18,45 +18,6 @@
           }
         }
       }
-    },
-    "eqc-oC-bnb.ibShadowedObjectValues[0]" : {
-      "comment" : "Class = \"NSComboBoxCell\"; eqc-oC-bnb.ibShadowedObjectValues[0] = \"Video\"; ObjectID = \"eqc-oC-bnb\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Video"
-          }
-        }
-      },
-      "shouldTranslate" : false
-    },
-    "eqc-oC-bnb.ibShadowedObjectValues[1]" : {
-      "comment" : "Class = \"NSComboBoxCell\"; eqc-oC-bnb.ibShadowedObjectValues[1] = \"Sprite\"; ObjectID = \"eqc-oC-bnb\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sprite"
-          }
-        }
-      },
-      "shouldTranslate" : false
-    },
-    "eqc-oC-bnb.ibShadowedObjectValues[2]" : {
-      "comment" : "Class = \"NSComboBoxCell\"; eqc-oC-bnb.ibShadowedObjectValues[2] = \"Scene\"; ObjectID = \"eqc-oC-bnb\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Scene"
-          }
-        }
-      },
-      "shouldTranslate" : false
     },
     "meB-hi-Jx4.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"meB-hi-Jx4\";",
