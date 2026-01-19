@@ -1,6 +1,6 @@
 //
-//  CodeLumeSaverView.swift
-//  CodeLumeSaver
+//  CodelumeSaverView.swift
+//  CodelumeSaver
 //
 //  Created by lyke on 2025/9/17.
 //
@@ -8,8 +8,8 @@
 import AppKit
 import ScreenSaver
 
-class CodeLumeSaver: ScreenSaverView {
-    private var codeLumeView: CodeLumeView? {
+class CodelumeSaver: ScreenSaverView {
+    private var codeLumeView: CodelumeView? {
         willSet {
             let codeLumeView = self.codeLumeView
             codeLumeView?.removeFromSuperview()
@@ -42,6 +42,6 @@ class CodeLumeSaver: ScreenSaverView {
     }
     
     private func initialize() {
-        codeLumeView = CodeLumeView(frame: bounds)
+        codeLumeView = CodelumeView(frame: bounds)
     }
 }

@@ -29,14 +29,14 @@
 				Models/ScreensaverType.swift,
 				Resources/codelume_1.mp4,
 				Utils/utils.swift,
-				Views/CodeLumeView.swift,
+				Views/CodelumeView.swift,
 				Views/SceneView.swift,
 				Views/SpriteView.swift,
 				Views/VideoView.swift,
 			);
 			target = 22EDA04C2E7D42B5009F0AF8 /* CodelumeSaverDemo */;
 		};
-		22EDA0632E7D497F009F0AF8 /* Exceptions for "CodeLumeSaverDemo" folder in "CodelumeSaverDemo" target */ = {
+		22EDA0632E7D497F009F0AF8 /* Exceptions for "CodelumeSaverDemo" folder in "CodelumeSaverDemo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -55,12 +55,12 @@
 			path = CodelumeSaver;
 			sourceTree = "<group>";
 		};
-		22EDA04E2E7D42B5009F0AF8 /* CodeLumeSaverDemo */ = {
+		22EDA04E2E7D42B5009F0AF8 /* CodelumeSaverDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				22EDA0632E7D497F009F0AF8 /* Exceptions for "CodeLumeSaverDemo" folder in "CodelumeSaverDemo" target */,
+				22EDA0632E7D497F009F0AF8 /* Exceptions for "CodelumeSaverDemo" folder in "CodelumeSaverDemo" target */,
 			);
-			path = CodeLumeSaverDemo;
+			path = CodelumeSaverDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				22E6CA402E7AAD880024FBC5 /* CodelumeSaver */,
-				22EDA04E2E7D42B5009F0AF8 /* CodeLumeSaverDemo */,
+				22EDA04E2E7D42B5009F0AF8 /* CodelumeSaverDemo */,
 				22E6CA3F2E7AAD880024FBC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 			name = CodelumeSaver;
 			packageProductDependencies = (
 			);
-			productName = CodeLumeSaver;
+			productName = CodelumeSaver;
 			productReference = 22E6CA3E2E7AAD880024FBC5 /* CodelumeSaver.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -150,12 +150,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				22EDA04E2E7D42B5009F0AF8 /* CodeLumeSaverDemo */,
+				22EDA04E2E7D42B5009F0AF8 /* CodelumeSaverDemo */,
 			);
 			name = CodelumeSaverDemo;
 			packageProductDependencies = (
 			);
-			productName = CodeLumeSaverDemo;
+			productName = CodelumeSaverDemo;
 			productReference = 22EDA04D2E7D42B5009F0AF8 /* CodelumeSaverDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -373,14 +373,14 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CodeLumeSaver/Info.plist;
+				INFOPLIST_FILE = CodelumeSaver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CodelumeSaver;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = CodeLumeSaver.CodeLumeSaver;
+				INFOPLIST_KEY_NSPrincipalClass = CodelumeSaver.CodelumeSaver;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodeLumeSaver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodelumeSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -400,14 +400,14 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CodeLumeSaver/Info.plist;
+				INFOPLIST_FILE = CodelumeSaver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CodelumeSaver;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = CodeLumeSaver.CodeLumeSaver;
+				INFOPLIST_KEY_NSPrincipalClass = CodelumeSaver.CodelumeSaver;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodeLumeSaver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodelumeSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -420,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CodeLumeSaverDemo/Resources/CodeLumeSaverDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CodelumeSaverDemo/Resources/CodelumeSaverDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -431,7 +431,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CodeLumeSaverDemo/Info.plist;
+				INFOPLIST_FILE = CodelumeSaverDemo/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -440,7 +440,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodeLumeSaverDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodelumeSaverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -455,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CodeLumeSaverDemo/Resources/CodeLumeSaverDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CodelumeSaverDemo/Resources/CodelumeSaverDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -465,7 +465,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CodeLumeSaverDemo/Info.plist;
+				INFOPLIST_FILE = CodelumeSaverDemo/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -474,7 +474,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodeLumeSaverDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodelumeSaverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
