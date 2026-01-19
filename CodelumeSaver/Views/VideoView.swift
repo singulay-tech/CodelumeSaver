@@ -1,6 +1,6 @@
 //
 //  VideoView.swift
-//  CodeLumeSaver
+//  CodelumeSaver
 //
 //  Created by lyke on 2025/9/19.
 //
@@ -29,7 +29,7 @@ class VideoView: NSView {
     }
     
     private func setupView() {
-        if let savedPath = UserDefaults.standard.string(forKey: "CodeLumeSelectedFilePath"),
+        if let savedPath = UserDefaults.standard.string(forKey: "CodelumeSelectedFilePath"),
            FileManager.default.fileExists(atPath: savedPath) {
             let videoURL = URL(fileURLWithPath: savedPath)
             player = AVPlayer(url: videoURL)

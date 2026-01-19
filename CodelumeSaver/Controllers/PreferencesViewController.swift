@@ -1,6 +1,6 @@
 //
 //  PreferencesViewController.swift
-//  CodeLumeSaver
+//  CodelumeSaver
 //
 //  Created by lyke on 2025/9/19.
 //
@@ -13,8 +13,8 @@ class PreferencesViewController: NSViewController {
     @IBOutlet weak var selectButton: NSButtonCell!
     @IBOutlet weak var versionLabel: NSTextField!
     
-    private let screensaverTypeKey = "CodeLumeScreensaverType"
-    private let selectedFilePathKey = "CodeLumeSelectedFilePath"
+    private let screensaverTypeKey = "CodelumeScreensaverType"
+    private let selectedFilePathKey = "CodelumeSelectedFilePath"
     private var tempSelectedFileURL: URL?
     
     private var screensaverType: ScreensaverType {
@@ -79,7 +79,7 @@ class PreferencesViewController: NSViewController {
         let controller = PreferencesViewController(nibName: "Preferences", bundle: Bundle(for: self))
         let window = NSWindow(contentViewController: controller)
         window.styleMask = [.titled, .closable]
-        window.title = "CodeLume Preferences"
+        window.title = "Codelume Preferences"
         window.setContentSize(NSSize(width: 300, height: 120))
         window.isReleasedWhenClosed = false
         return window

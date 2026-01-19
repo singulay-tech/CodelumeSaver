@@ -1,15 +1,15 @@
 //
-//  CodeLumeView.swift
-//  CodeLumeSaver
+//  CodelumeView.swift
+//  CodelumeSaver
 //
 //  Created by lyke on 2025/9/19.
 //
 
 import AppKit
 
-class CodeLumeView: NSView {
+class CodelumeView: NSView {
     private var currentView: NSView?
-    private let screensaverTypeKey = "CodeLumeScreensaverType"
+    private let screensaverTypeKey = "CodelumeScreensaverType"
     
     required override init(frame: NSRect) {
         super.init(frame: frame)

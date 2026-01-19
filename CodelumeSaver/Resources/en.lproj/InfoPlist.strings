@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  CodelumeSaver
+
+  Created by lyke on 2025/9/22.
+  
+*/
+CFBundleDisplayName = "CodelumeSaver";
+CFBundleName = "CodelumeSaver";

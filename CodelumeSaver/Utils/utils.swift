@@ -1,6 +1,6 @@
 //
 //  utils.swift
-//  CodeLumeSaver
+//  CodelumeSaver
 //
 //  Created by lyke on 2025/9/22.
 //
@@ -13,7 +13,7 @@ func getApplicationSupportDirectory() -> URL? {
         return nil
     }
     
-    let appDir = appSupportDir.appendingPathComponent("CodeLumeSaver", isDirectory: true)
+    let appDir = appSupportDir.appendingPathComponent("CodelumeSaver", isDirectory: true)
     
     do {
         try fileManager.createDirectory(at: appDir, withIntermediateDirectories: true, attributes: nil)
