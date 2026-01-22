@@ -20,12 +20,9 @@ class SceneView: NSView {
     
     private func setupView() {
         self.wantsLayer = true
-        self.layer?.backgroundColor = NSColor.darkGray.cgColor
-        
-        // 暂时为空实现，后续可以添加场景相关功能
+        self.layer?.backgroundColor = NSColor.yellow.cgColor
     }
     
     func stop() {
-        // 清理资源
     }
 }

@@ -1,24 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "5Fy-je-a9j.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Type：\"; ObjectID = \"5Fy-je-a9j\";",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Type："
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "类型："
-          }
-        }
-      }
-    },
     "meB-hi-Jx4.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"meB-hi-Jx4\";",
       "extractionState" : "extracted_with_value",

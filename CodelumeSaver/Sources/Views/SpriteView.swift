@@ -20,12 +20,9 @@ class SpriteView: NSView {
     
     private func setupView() {
         self.wantsLayer = true
-        self.layer?.backgroundColor = NSColor.black.cgColor
-        
-        // 暂时为空实现，后续可以添加精灵相关功能
+        self.layer?.backgroundColor = NSColor.green.cgColor
     }
     
     func stop() {
-        // 清理资源
     }
 }

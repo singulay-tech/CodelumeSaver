@@ -17,7 +17,7 @@ func getApplicationSupportDirectory() -> URL? {
     
     do {
         try fileManager.createDirectory(at: appDir, withIntermediateDirectories: true, attributes: nil)
-        NSLog("Created application support directory: \(appDir.path)")
+        print("Created application support directory: \(appDir.path)")
         return appDir
     } catch {
         print("Failed to create application support directory: \(error)")
@@ -57,28 +57,10 @@ func copyFileToSandbox(_ sourceURL: URL) -> URL? {
             try fileManager.removeItem(at: destinationURL)
         }
         
-        if fileName.hasSuffix(".framework") {
-            try fileManager.copyItem(at: sourceURL, to: destinationURL)
-        } else {
-            try fileManager.copyItem(at: sourceURL, to: destinationURL)
-        }
-        
+        try fileManager.copyItem(at: sourceURL, to: destinationURL)
         return destinationURL
     } catch {
         print("Failed to copy file: \(error)")
         return nil
     }
-}
-
-func copyDefaultVideoToSandbox() -> String? {
-    guard let defaultVideoURL = Bundle(for: PreferencesViewController.self).url(forResource: "codelume_1", withExtension: "mp4") else {
-        print("Default video file not found in bundle")
-        return nil
-    }
-    
-    if let destinationURL = copyFileToSandbox(defaultVideoURL) {
-        return destinationURL.path
-    }
-    
-    return nil
 }

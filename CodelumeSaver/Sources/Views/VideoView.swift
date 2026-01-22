@@ -8,6 +8,7 @@
 import AppKit
 import AVKit
 import AVFoundation
+import CodelumeBundle
 
 class VideoView: NSView {
     private var player: AVPlayer?
@@ -29,14 +30,23 @@ class VideoView: NSView {
     }
     
     private func setupView() {
-        if let savedPath = UserDefaults.standard.string(forKey: "CodelumeSelectedFilePath"),
-           FileManager.default.fileExists(atPath: savedPath) {
-            let videoURL = URL(fileURLWithPath: savedPath)
-            player = AVPlayer(url: videoURL)
-        } else {
-            if let videoURL = Bundle(for: type(of: self)).url(forResource: "codelume_1", withExtension: "mp4") {
-                player = AVPlayer(url: videoURL)
+        let defaultVideoURL = Bundle(for: type(of: self)).url(forResource: "codelume", withExtension: "mov")!
+        if let filePath = ScreenSaverConfig().getFilePath(),
+           FileManager.default.fileExists(atPath: filePath) {
+            let fileURL = URL(fileURLWithPath: filePath)
+            if fileURL.pathExtension != "bundle" {
+                print("screensaver type is video.")
+                player = AVPlayer(url: fileURL)
+            } else {
+                print("screensaver type is bundle")
+                let bundle = VideoBundle()
+                _ = bundle.open(wallpaperUrl: fileURL)
+                player = AVPlayer(url: bundle.videoUrl ?? defaultVideoURL)
             }
+            
+        } else {
+            print("file not exists, use default video.")
+            player = AVPlayer(url: defaultVideoURL)
         }
 
         if let player = player {

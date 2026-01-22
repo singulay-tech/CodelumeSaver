@@ -9,13 +9,12 @@ import AppKit
 
 class CodelumeView: NSView {
     private var currentView: NSView?
-    private let screensaverTypeKey = "CodelumeScreensaverType"
     
     required override init(frame: NSRect) {
         super.init(frame: frame)
         setupView()
     }
-
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
@@ -57,9 +56,18 @@ class CodelumeView: NSView {
             self.currentView = nil
         }
         
-        let screensaverType = getCurrentScreensaverType()
-        
-        switch screensaverType {
+        switch ScreenSaverConfig().getScreensaverType() {
+        case .Video:
+            let videoView = VideoView(frame: self.bounds)
+            self.addSubview(videoView)
+            self.currentView = videoView
+        case .Bundle:
+            loadBundle()
+        }
+    }
+    
+    private func loadBundle() {
+        switch ScreenSaverConfig().getBundleType() {
         case .Video:
             let videoView = VideoView(frame: self.bounds)
             self.addSubview(videoView)
@@ -73,14 +81,6 @@ class CodelumeView: NSView {
             self.addSubview(sceneView)
             self.currentView = sceneView
         }
-    }
-    
-    private func getCurrentScreensaverType() -> ScreensaverType {
-        if let savedType = UserDefaults.standard.string(forKey: screensaverTypeKey),
-           let type = ScreensaverType(rawValue: savedType) {
-            return type
-        }
-        return .Video
     }
     
     @objc private func preferencesDidChange() {

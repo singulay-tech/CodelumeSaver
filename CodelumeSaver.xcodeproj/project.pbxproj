@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8681D6112F2255B800FE1111 /* CodelumeBundle in Frameworks */ = {isa = PBXBuildFile; productRef = 8681D6102F2255B800FE1111 /* CodelumeBundle */; };
+		8681D6142F2255E700FE1111 /* CodelumeBundle in Frameworks */ = {isa = PBXBuildFile; productRef = 8681D6132F2255E700FE1111 /* CodelumeBundle */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		22E6CA3E2E7AAD880024FBC5 /* CodelumeSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodelumeSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EDA04D2E7D42B5009F0AF8 /* CodelumeSaverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodelumeSaverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,16 +28,17 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Resources/Preferences.xib",
-				CodelumeSaver.swift,
-				Controllers/PreferencesViewController.swift,
-				Models/NotificationName.swift,
-				Models/ScreensaverType.swift,
-				Resources/codelume_1.mp4,
-				Utils/utils.swift,
-				Views/CodelumeView.swift,
-				Views/SceneView.swift,
-				Views/SpriteView.swift,
-				Views/VideoView.swift,
+				Resources/codelume.mov,
+				Sources/CodelumeSaver.swift,
+				Sources/Model.swift,
+				Sources/NotificationName.swift,
+				Sources/PreferencesViewController.swift,
+				Sources/ScreenSaverConfig.swift,
+				Sources/Utils.swift,
+				Sources/Views/CodelumeView.swift,
+				Sources/Views/SceneView.swift,
+				Sources/Views/SpriteView.swift,
+				Sources/Views/VideoView.swift,
 			);
 			target = 22EDA04C2E7D42B5009F0AF8 /* CodelumeSaverDemo */;
 		};
@@ -70,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8681D6112F2255B800FE1111 /* CodelumeBundle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8681D6142F2255E700FE1111 /* CodelumeBundle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +96,7 @@
 			children = (
 				22E6CA402E7AAD880024FBC5 /* CodelumeSaver */,
 				22EDA04E2E7D42B5009F0AF8 /* CodelumeSaverDemo */,
+				8681D6122F2255E700FE1111 /* Frameworks */,
 				22E6CA3F2E7AAD880024FBC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +108,13 @@
 				22EDA04D2E7D42B5009F0AF8 /* CodelumeSaverDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8681D6122F2255E700FE1111 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +148,7 @@
 			);
 			name = CodelumeSaver;
 			packageProductDependencies = (
+				8681D6102F2255B800FE1111 /* CodelumeBundle */,
 			);
 			productName = CodelumeSaver;
 			productReference = 22E6CA3E2E7AAD880024FBC5 /* CodelumeSaver.saver */;
@@ -154,6 +171,7 @@
 			);
 			name = CodelumeSaverDemo;
 			packageProductDependencies = (
+				8681D6132F2255E700FE1111 /* CodelumeBundle */,
 			);
 			productName = CodelumeSaverDemo;
 			productReference = 22EDA04D2E7D42B5009F0AF8 /* CodelumeSaverDemo.app */;
@@ -167,7 +185,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					22E6CA3D2E7AAD880024FBC5 = {
 						CreatedOnToolsVersion = 16.4;
@@ -188,6 +206,9 @@
 			);
 			mainGroup = 22E6CA342E7AAD880024FBC5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8681D60F2F2255B800FE1111 /* XCLocalSwiftPackageReference "../CodelumeBundle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 22E6CA3F2E7AAD880024FBC5 /* Products */;
 			projectDirPath = "";
@@ -370,13 +391,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodelumeSaver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CodelumeSaver;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = CodelumeSaver;
+				INFOPLIST_KEY_NSPrincipalClass = CodelumeSaver.CodelumeSaver;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.2.0;
@@ -397,13 +417,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodelumeSaver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CodelumeSaver;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = CodelumeSaver;
+				INFOPLIST_KEY_NSPrincipalClass = CodelumeSaver.CodelumeSaver;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.2.0;
@@ -441,7 +460,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodelumeSaverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -477,7 +496,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codelume.CodelumeSaverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -518,6 +537,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		8681D60F2F2255B800FE1111 /* XCLocalSwiftPackageReference "../CodelumeBundle" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../CodelumeBundle;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8681D6102F2255B800FE1111 /* CodelumeBundle */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CodelumeBundle;
+		};
+		8681D6132F2255E700FE1111 /* CodelumeBundle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8681D60F2F2255B800FE1111 /* XCLocalSwiftPackageReference "../CodelumeBundle" */;
+			productName = CodelumeBundle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22E6CA352E7AAD880024FBC5 /* Project object */;
 }
