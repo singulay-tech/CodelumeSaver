@@ -2,8 +2,8 @@
 /* Class = "NSMenuItem"; title = "Customize Toolbar…"; ObjectID = "1UK-8n-QPP"; */
 "1UK-8n-QPP.title" = "Customize Toolbar…";
 
-/* Class = "NSMenuItem"; title = "CodeLumeSaverDemo"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "CodeLumeSaverDemo";
+/* Class = "NSMenuItem"; title = "CodelumeSaverDemo"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "CodelumeSaverDemo";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Find";
@@ -35,8 +35,8 @@
 /* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
 "4J7-dP-txa.title" = "Enter Full Screen";
 
-/* Class = "NSMenuItem"; title = "Quit CodeLumeSaverDemo"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quit CodeLumeSaverDemo";
+/* Class = "NSMenuItem"; title = "Quit CodelumeSaverDemo"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit CodelumeSaverDemo";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "Edit";
@@ -44,8 +44,8 @@
 /* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
 "5Vv-lz-BsD.title" = "Copy Style";
 
-/* Class = "NSMenuItem"; title = "About CodeLumeSaverDemo"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "About CodeLumeSaverDemo";
+/* Class = "NSMenuItem"; title = "About CodelumeSaverDemo"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About CodelumeSaverDemo";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Redo";
@@ -83,8 +83,8 @@
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "Help";
 
-/* Class = "NSMenuItem"; title = "CodeLumeSaverDemo Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "CodeLumeSaverDemo Help";
+/* Class = "NSMenuItem"; title = "CodelumeSaverDemo Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "CodelumeSaverDemo Help";
 
 /* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
 "Fal-I4-PZk.title" = "Text";
@@ -161,8 +161,8 @@
 /* Class = "NSMenuItem"; title = "Baseline"; ObjectID = "OaQ-X3-Vso"; */
 "OaQ-X3-Vso.title" = "Baseline";
 
-/* Class = "NSMenuItem"; title = "Hide CodeLumeSaverDemo"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Hide CodeLumeSaverDemo";
+/* Class = "NSMenuItem"; title = "Hide CodelumeSaverDemo"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide CodelumeSaverDemo";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "Find Previous";
@@ -176,8 +176,8 @@
 /* Class = "NSMenuItem"; title = "Show Fonts"; ObjectID = "Q5e-8K-NDq"; */
 "Q5e-8K-NDq.title" = "Show Fonts";
 
-/* Class = "NSWindow"; title = "CodeLumeSaverDemo"; ObjectID = "QvC-M9-y7g"; */
-"QvC-M9-y7g.title" = "CodeLumeSaverDemo";
+/* Class = "NSWindow"; title = "CodelumeSaverDemo"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "CodelumeSaverDemo";
 
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Zoom";
@@ -356,8 +356,8 @@
 /* Class = "NSMenu"; title = "Kern"; ObjectID = "tlD-Oa-oAM"; */
 "tlD-Oa-oAM.title" = "Kern";
 
-/* Class = "NSMenu"; title = "CodeLumeSaverDemo"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "CodeLumeSaverDemo";
+/* Class = "NSMenu"; title = "CodelumeSaverDemo"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "CodelumeSaverDemo";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "Cut";

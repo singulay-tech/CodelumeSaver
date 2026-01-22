@@ -1,9 +1,0 @@
-/* 
-  InfoPlist.strings
-  CodeLumeSaver
-
-  Created by lyke on 2025/9/22.
-  
-*/
-CFBundleDisplayName = "CodeLumeSaver";
-CFBundleName = "CodeLumeSaver";

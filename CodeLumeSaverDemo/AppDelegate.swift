@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  CodeLumeSaverDemo
+//  CodelumeSaverDemo
 //
 //  Created by lyke on 2025/9/19.
 //
@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var window: NSWindow!
     
     let view: ScreenSaverView = {
-        let view = CodeLumeSaver(frame: .zero, isPreview: false)!
+        let view = CodelumeSaver(frame: .zero, isPreview: false)!
         view.autoresizingMask = [.width, .height]
         return view
     }()

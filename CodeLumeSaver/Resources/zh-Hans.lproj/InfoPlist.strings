@@ -1,9 +1,0 @@
-/* 
-  InfoPlist.strings
-  CodeLumeSaver
-
-  Created by lyke on 2025/9/22.
-  
-*/
-CFBundleDisplayName = "码镜屏保";
-CFBundleName = "码镜屏保";

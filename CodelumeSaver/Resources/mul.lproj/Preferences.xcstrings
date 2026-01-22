@@ -1,0 +1,91 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "meB-hi-Jx4.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"meB-hi-Jx4\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "o6g-Ws-KBu.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Version: v1.0.0\"; ObjectID = \"o6g-Ws-KBu\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version: v1.0.0"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "qBv-Ob-tkh.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Open File Panel\"; ObjectID = \"qBv-Ob-tkh\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Open File Panel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开文件面板"
+          }
+        }
+      }
+    },
+    "SFd-4G-QWE.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Done\"; ObjectID = \"SFd-4G-QWE\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Done"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        }
+      }
+    },
+    "vDi-JS-5cs.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Select File:\"; ObjectID = \"vDi-JS-5cs\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Select File:"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择文件："
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
