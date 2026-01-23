@@ -64,6 +64,7 @@ class VideoView: NSView {
                     name: .AVPlayerItemDidPlayToEndTime,
                     object: player.currentItem
                 )
+                player.isMuted = true
                 player.play()
             }
         }
