@@ -52,7 +52,7 @@ class PreferencesViewController: NSViewController {
                 
                 let bundleType = bundle.bundleInfo.type
                 switch bundleType {
-                case .video:
+                case .Video:
                     ScreenSaverConfig().setBundleType(type: .Video)
                 case .Scene2D:
                     ScreenSaverConfig().setBundleType(type: .Sprite)

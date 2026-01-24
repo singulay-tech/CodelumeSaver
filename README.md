@@ -24,6 +24,10 @@ Paid download to support Apple Developer Program costs. Auto-updated.
 
 ![Installation](Resources/Install.gif)
 
+Reboot your Mac after installation, and you can use CodelumeSaver.
+
+![AfterInstallation](Resources/AfterInstall.gif)
+
 # Plan
 
  - Support playing CodeLume bundles based on the SpriteKit framework.
