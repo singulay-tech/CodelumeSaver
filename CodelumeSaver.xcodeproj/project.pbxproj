@@ -21,7 +21,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				Resources/codelume.mov,
 			);
 			target = 22E6CA3D2E7AAD880024FBC5 /* CodelumeSaver */;
 		};
