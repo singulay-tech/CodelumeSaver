@@ -65,7 +65,7 @@ struct ScreenSaverConfig {
     func resetConfig() {
         setScreensaverType(type: .Video)
         setBundleType(type: .Video)
-        setFilePath(path: "codelume.mov")
+        setFilePath(path: "codelume.mp4")
         shared?.synchronize()
     }
 }

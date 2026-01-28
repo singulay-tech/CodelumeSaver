@@ -28,7 +28,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Resources/Preferences.xib",
-				Resources/codelume.mov,
 				Sources/CodelumeSaver.swift,
 				Sources/Model.swift,
 				Sources/NotificationName.swift,

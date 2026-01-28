@@ -30,7 +30,7 @@ class VideoView: NSView {
     }
     
     private func setupView() {
-        let defaultVideoURL = Bundle(for: type(of: self)).url(forResource: "codelume", withExtension: "mov")!
+        let defaultVideoURL = Bundle(for: type(of: self)).url(forResource: "codelume", withExtension: "mp4")!
         if let filePath = ScreenSaverConfig().getFilePath(),
            FileManager.default.fileExists(atPath: filePath) {
             let fileURL = URL(fileURLWithPath: filePath)
